@@ -1,5 +1,5 @@
 {
-  "name": "passport-local-express4",
+  "name": "messoota",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git@github.com:mjhea0/passport-local-express4.git"
   },
-  "author": "Michael Herman <michael@mherman.org>",
+  "author": "Dayasudhan",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.10.2",
