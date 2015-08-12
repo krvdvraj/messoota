@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+table#t02 {
+    width: 100%;    
+    background-color: #f1f1c1;
+}
+#menu ul{
+margin:0px;
+padding:0px;
+list-style-type:none;
+}
+#menu a{
+display:block;
+width:8em;
+background-color:#000099;
+text-decoration:none;
+text-align:center;
+}
+#menu a:hover {
+background-color: : #665577;
+}
+
+#menu li {
+  float:left;
+  margin-right:0.5em;
+}
+</style>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+<div class="container">
+  <h1>Index Page</h1>
+  <% if(!user) { %> <a href="/login">Login</a><br/><a href="/register">Register</a><% } 
+    else{%><p>You are currently logged in as <%= user.username%> <a href="/menu">Menu Update</a></p> <a href="/logout">Logout</a></p><%} %>
+</div>
+<div id="menu">
+  <ul>
+    <li><a href="/menu">Menu Update</a></li>
+     <li><a href="/menu2">Menu2 Update</a></li>
+  </ul>
+</div>
+  <% if(user) { %>
+ <h1>Today Order List</h1>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="javascripts/vendor.js"></script>
+<script>
+vendor('<%= user.username %>');
+</script>
+
+  <table id="t02" >
+    <tr>
+      <th>Name</th>
+      <th>Email</th>    
+    <th>Phone</th>
+    <th>Item</th>
+    <th>No_of_Items</th>
+  </tr>
+  
+</table>
+<% } %>
+  </body>
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</html>

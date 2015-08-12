@@ -1,0 +1,13 @@
+<div class="container">
+  <form id="myform" role="form" style="max-width: 300px;">
+    <div class="form-group">
+      <input type="text" name="fooditem" placeholder="Enter food item" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <input type="text" name="foodprice" placeholder="Enter Food price" class="form-control"/>
+    </div>
+    <button type="submit" class="btn btn-default" onclick="menu_add(this.form,'<%= user.username %>')">Submit</button>&nbsp;<a href="/">
+    <button type="button" class="btn btn-primary">Cancel</button></a>
+  </form>
+
+</div>
